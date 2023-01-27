@@ -31,5 +31,5 @@ android {
 }
 
 dependencies {
-    testImplementation("junit:junit:4.13.2")
+    testImplementation(Dependencies.Testing.JUnit4)
 }
