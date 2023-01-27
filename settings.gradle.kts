@@ -14,3 +14,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Project-Skeleton"
 include(":app")
+include(":core")
