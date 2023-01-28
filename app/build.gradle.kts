@@ -3,7 +3,12 @@ import java.io.FileInputStream
 
 plugins {
     id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    id(Plugins.kotlinKapt)
+    id(Plugins.kotlinAndroid)
+}
+
+kapt {
+    correctErrorTypes = true
 }
 
 android {
@@ -16,6 +21,16 @@ android {
         targetSdk = ProjectConfigs.targetSdkVersion
         versionCode = 1
         versionName = "1.0"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += mapOf(
+                    "room.schemaLocation" to "$projectDir/schemas",
+                    "room.incremental" to "true",
+                    "room.expandProjection" to "true"
+                )
+            }
+        }
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
