@@ -15,7 +15,9 @@ All classes with dependencies are lie in the directory [root/buildSrc/src/main/k
 rootProject.name = "Your-Project-Name"
 ```
 in the file [settings.gradle.kts](https://github.com/yuriysurzhikov/Project-Skeleton/blob/master/settings.gradle.kts). After that you need to override the package name for root project. By default it has com.yuriisurzhykov.projectskeleton id, and you have to override it to your own. 
+
 2. The next step is to create signing file(e.g. _.jks_), then replace current **keystore.jks** with your own in the _root/app_ folder.
+
 3. The next step is to fill signing.properties file in folder [root/app](https://github.com/yuriysurzhikov/Project-Skeleton/tree/master/app) with properties that you choose while created your .jks file.
 In this file you have to have the next configs:
 ```
